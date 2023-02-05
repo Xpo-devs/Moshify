@@ -5,9 +5,13 @@
     --color-headings: #1b0760;
     --color-body: #918ca4;
 }
+
+/* Typography */
+
 html { 
     font-size: 62.5%;
 }
+/* Mobile version design */
 
 body { 
     font-family: Inter, Arial, Helvetica, sans-serif;
@@ -35,6 +39,10 @@ p {
     margin-top: 0;
 }
 
+a { 
+    text-decoration: none;
+}
+
 /* Media Query for Screen  size Greater than 1024px*/
 
 @media screen and (min-width: 1024px) {
@@ -52,5 +60,30 @@ p {
         
     h3 { 
         font-size: 2.4rem;
+    }
+}
+
+
+/* Links */
+
+.arrow-link { 
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--color-accent);
+}
+.arrow-link::after { 
+    content: "-->";
+    color: var(--color-accent);
+    margin-left: 5px;
+    transform: margin 0.15s;
+}
+.arrow-link:hover::after {
+    margin-left: 10px;
+} 
+
+@media screen and (min-width: 1024px) {
+    .arrow-link { 
+        font-size: 1.5rem;
     }
 }
